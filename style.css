@@ -1,0 +1,456 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #2196F3; /* Blue */
+    --background-light: #F5F5F5;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+    --font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* --- CTA Button --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #388E3C; /* Darker green */
+    transform: translateY(-2px);
+}
+
+/* --- 1. Hero Section --- */
+.hero-section {
+    background-color: var(--background-light); /* Soft light background */
+    text-align: center;
+    padding: 80px 0;
+    background-image: url('path/to/your/subtle-finance-background.png'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section h1 {
+    color: var(--text-dark); /* Darker headline for contrast */
+    font-size: 3rem; /* Larger headline */
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.hero-cta {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+}
+
+/* --- 2. Product Features Section --- */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.feature-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+/* --- 3. Who is it for? Section --- */
+.who-is-it-for-section {
+    padding: 80px 0;
+    background-color: var(--background-light);
+}
+
+.who-is-it-for-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.who-is-it-for-item .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.who-is-it-for-item h3 {
+    margin-bottom: 5px;
+}
+
+.who-is-it-for-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* --- 4. Benefits Section --- */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.benefit-item h3 {
+    margin-bottom: 5px;
+}
+
+/* --- 5. Testimonials Section --- */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--background-light);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes author to the bottom */
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    flex-grow: 1; /* Allows text to take up available space */
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Pushes to the bottom */
+}
+
+.author-initial {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.testimonial-author strong {
+    color: var(--text-dark);
+}
+
+.testimonial-author small {
+    color: var(--text-light);
+}
+
+/* --- 6. Pricing Section --- */
+.pricing-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.pricing-card {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05); /* Make featured card slightly larger */
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3); /* Green shadow */
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.pricing-card .price .currency {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.pricing-card p {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+.pricing-card .cta-button {
+    width: 100%; /* Full width button */
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* --- 7. FAQ Section --- */
+.faq-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.faq-question {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e0e0e0;
+}
+
+.faq-question .arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    background-color: var(--white);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+    padding-bottom: 20px; /* Space between text and bottom border */
+    color: var(--text-light);
+}
+
+/* --- 8. Final CTA Section --- */
+.final-cta-section {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.final-cta-section h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.final-cta {
+    background-color: var(--white);
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    padding: 15px 40px;
+    margin-top: 30px;
+}
+
+.final-cta:hover {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+.footer-note {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-note a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-note a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    .features-section, .who-is-it-for-section, .benefits-section, .testimonials-section, .pricing-section, .faq-section, .final-cta-section {
+        padding: 60px 0;
+    }
+    .features-grid, .who-is-it-for-grid, .benefits-grid, .testimonials-grid, .pricing-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+    .testimonial-card {
+        padding: 20px;
+    }
+    .pricing-card.featured {
+        transform: none; /* Remove scaling on mobile */
+    }
+    .faq-question {
+        font-size: 1rem;
+    }
+    .final-cta-section h2 {
+        font-size: 2rem;
+    }
+    .final-cta {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+}
